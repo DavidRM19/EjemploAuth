@@ -74,6 +74,7 @@ public class MainController {
     public String showLoginForm(Model model, HttpServletRequest request) {
         HttpSession session = request.getSession(false);
         boolean isLoggedIn = (session != null && session.getAttribute("SPRING_SECURITY_CONTEXT") != null);
+        logger.info("@ INFO :: ### Acceso a Página Login . ###");
         model.addAttribute("isLoggedIn", isLoggedIn);
         return "public/login"; // Nombre de tu plantilla de inicio de sesión
     }

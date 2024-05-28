@@ -7,6 +7,10 @@
 </head>
 <body>
     <div class="container mt-5">
+		<div class="container mt-4">
+		        <!-- Encabezado de la página -->
+		     <header th:replace="~{fragments/header :: headerFragment}"></header>
+		</div>
         <h2>Crear Usuario</h2>
         <form th:action="@{/crear}" th:object="${usuario}" method="post">
             <!-- Nombre de Usuario -->

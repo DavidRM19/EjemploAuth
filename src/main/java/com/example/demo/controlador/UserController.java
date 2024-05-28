@@ -56,7 +56,8 @@ public class UserController {
      * @param palabraClave la palabra clave para buscar en los comentarios
      * @param request la solicitud HTTP
      * @return el nombre de la vista para la página de inicio del usuario
-     */
+     */ 
+    
     @GetMapping("/home")
     @PreAuthorize("hasRole('USER')")
     public String user(Model model, Authentication authentication,
@@ -179,5 +180,6 @@ public class UserController {
         comentariosServicio.guardar(comentario);
         return "redirect:/user/home";
     }
+ 
 }
 	
